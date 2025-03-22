@@ -1,3 +1,47 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FaGift, FaCalendarAlt, FaShoppingCart, FaQrcode } from "react-icons/fa";
+
+export default function VibrissaApp() {
+  return (
+    <div className="bg-[#FFF3B0] min-h-screen p-4 font-[AmericanTypewriter] text-[#540B0E]">
+      {/* Header */}
+      <div className="text-center text-3xl font-bold text-[#335C67] font-[Montserrat]">
+        Vibrissa - Retró Vibes
+      </div>
+      
+      {/* Dashboard */}
+      <Card className="bg-[#E09F3E] text-white p-4 mt-6 shadow-lg rounded-2xl">
+        <CardContent className="flex flex-col items-center">
+          <p className="text-lg">Punti Fedeltà</p>
+          <p className="text-4xl font-bold">1,250</p>
+          <Button className="mt-4 bg-[#540B0E] text-white">Usa i tuoi punti</Button>
+        </CardContent>
+      </Card>
+      
+      {/* Funzionalità Principali */}
+      <div className="grid grid-cols-2 gap-4 mt-6">
+        <Button className="bg-[#9E2A2B] text-white flex flex-col items-center p-4 rounded-xl">
+          <FaQrcode size={30} />
+          <span>Scannerizza QR</span>
+        </Button>
+        <Button className="bg-[#E09F3E] text-white flex flex-col items-center p-4 rounded-xl">
+          <FaGift size={30} />
+          <span>Premi & Offerte</span>
+        </Button>
+        <Button className="bg-[#335C67] text-white flex flex-col items-center p-4 rounded-xl">
+          <FaCalendarAlt size={30} />
+          <span>Eventi</span>
+        </Button>
+        <Button className="bg-[#540B0E] text-white flex flex-col items-center p-4 rounded-xl">
+          <FaShoppingCart size={30} />
+          <span>Shop Online</span>
+        </Button>
+      </div>
+    </div>
+  );
+}
 ---
 sidebar_title: Get started
 title: Get started with EAS Workflows
